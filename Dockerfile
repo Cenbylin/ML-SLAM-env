@@ -28,7 +28,7 @@ RUN ln -s /root/bin/latex /usr/bin/
 
 # jupyter with config (no pwd, port 8888 allow-root)
 RUN conda install -c conda-forge jupyterlab
-ADD https://gitee.com/cenbylin/doclam-config/raw/master/jupyter_notebook_config.py /root/.jupyter/
+ADD config/jupyter_notebook_config.py /root/.jupyter/
 
 # https://stackoverflow.com/questions/16296753/can-you-run-gui-applications-in-a-docker-container/16311264#16311264
 RUN apt-get install -y x11vnc xvfb
@@ -86,6 +86,6 @@ ENV QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
 ADD example /root/example
 
 # launch jupyter, CoppeliaSim etc.
-ADD https://gitee.com/cenbylin/doclam-config/raw/master/docker_cmd.sh /root
+ADD config/docker_cmd.sh /root
 RUN chmod +x /root/docker_cmd.sh
 CMD /root/docker_cmd.sh
