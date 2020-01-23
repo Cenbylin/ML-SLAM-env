@@ -1,0 +1,9 @@
+[submodule "PyRep"]
+	path = PyRep
+	url = https://github.com/stepjam/PyRep.git
+[submodule "ORB_SLAM2"]
+	path = ORB_SLAM2
+	url = https://github.com/raulmur/ORB_SLAM2.git
+[submodule "Pangolin"]
+	path = Pangolin
+	url = https://github.com/stevenlovegrove/Pangolin.git
