@@ -15,7 +15,7 @@ RUN conda update -n base conda && conda update --all
 RUN apt-get -y install cmake libpython2.7-dev python3-dev
 
 # common-opencv - 3.4
-RUN apt-get install -y libgtk2.0-dev pkg-config
+RUN apt-get install -y libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev libgl1-mesa-dev
 # RUN conda install -y opencv -c https://mirrors.ustc.edu.cn/anaconda/cloud/menpo
 RUN conda install -y opencv=3.4.7 -c https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
 
@@ -38,7 +38,7 @@ RUN apt-get install -y x11vnc xvfb
 RUN mkdir ~/.vnc && x11vnc -storepasswd 1234 ~/.vnc/passwd
 
 # requirements of pyrep
-RUN apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libgl1-mesa-dev
+RUN apt-get -f install
 RUN conda install -y cffi==1.11.5
 ADD CoppeliaSim /opt/CoppeliaSim
 ADD PyRep /opt/PyRep
