@@ -12,23 +12,10 @@ if [ ! -d "$file_CoppeliaSim" ]; then
   # rename
   mv CoppeliaSim_Edu_V4_0_0_Ubuntu18_04 CoppeliaSim
 else
-  echo "use file exited."
+  echo "file existed."
 fi
 
-file_rgbd="data/rgbd_dataset_freiburg1_xyz.tar"
-echo "[2/nstep] downloading data/rgbd_dataset...pass"
-# if [ ! -f "$file_rgbd" ]; then
-#   wget xxxxx
-#   xz -d xxxxx
-#   tar -xvf CoppeliaSim_Edu_V4_0_0_Ubuntu18_04.tar
-#   rm CoppeliaSim_Edu_V4_0_0_Ubuntu18_04.tar
-#   # rename
-#   mv CoppeliaSim_Edu_V4_0_0_Ubuntu18_04/ CoppeliaSim/
-# else
-#   echo "use file exited."
-# fi
-
-echo "[3/nstep] building Docker with Dockerfile..."
+echo "[2/nstep] building Docker with Dockerfile..."
 
 docker build -t ml-slam-env .
 

@@ -77,7 +77,7 @@ RUN cd /root/ORB_SLAM2 && chmod +x build.sh \
     && ./build.sh
 
 # data
-ADD data/rgbd_dataset_freiburg1_xyz.tar /root/data
+# ADD data/rgbd_dataset_freiburg1_xyz.tar /root/data
 
 # define ENV over the final process
 # ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
