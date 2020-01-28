@@ -31,6 +31,14 @@ access URL [http://127.0.0.1:18888](http://127.0.0.1:18888)
 
 `quick_start.ipynb` is existing in `/root/example`
 
+------
+
 ![jupyter_lab_run](./images/jupyter_lab_run.png)
+
+------
+
+![jupyter_lab_run](./images/jupyter_lab_run2.png)
+
+------
 
 #### data: come back soon
