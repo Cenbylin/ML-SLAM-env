@@ -19,7 +19,7 @@ docker run -it --rm -p 5901:5900 -p 18888:8888 ml-slam-env
 
 ### 4. use jupyter lab on your browser
 
-access URL [http://127.0.0.1:18888](http://127.0.0.1:18888/?_blank)
+access URL [http://127.0.0.1:18888](http://127.0.0.1:18888)
 
 ### 5. use vnc client to view the virtual screen (enable GUI application)
 
