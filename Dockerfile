@@ -83,6 +83,15 @@ RUN cd /root/ORB_SLAM2 && chmod +x build.sh \
 # ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
 # ENV QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
 
+# remote development support (tested on CLion)
+RUN apt-get install -y gdb openssh-server rsync
+RUN mkdir /var/run/sshd && mkdir /root/sync
+RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+    sed -i 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
+    sed -i 's/RSYNC_ENABLE=false/RSYNC_ENABLE=true/g' /etc/default/rsync
+ADD config/rsync.conf /etc
+RUN echo 'root:000000' |chpasswd
+
 # examples
 ADD example /root/example
 

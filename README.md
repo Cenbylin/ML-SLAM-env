@@ -41,4 +41,12 @@ access URL [http://127.0.0.1:18888](http://127.0.0.1:18888)
 
 ------
 
-#### data: come back soon
+#### Data
+
+come back soon
+
+#### Remote Development
+
+Tested on CLion.
+
+come back soon.
